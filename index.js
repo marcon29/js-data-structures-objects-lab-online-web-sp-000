@@ -9,7 +9,12 @@ function updateDriverWithKeyAndValue(driver, key, value) {
 
 // return a new driver with value for specified key
 function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
-    return Object.assign(driver, {[key]: value});
+    // my original
+    // return Object.assign(driver, {[key]: value});
+
+    // school's way - and I agree this is better
+    driver[key] = value;
+    return driver
 }
 
 // return new object that with exisitng driver except with specified key/value pair deleted
